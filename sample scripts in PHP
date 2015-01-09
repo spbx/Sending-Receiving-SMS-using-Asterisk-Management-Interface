@@ -1,0 +1,28 @@
+Asterisk GSM Sample AMI SMS script
+
+Original code taken from:
+http://code.google.com/p/asterisk-php-api 
+
+To run the sample application, you will need the following packages:
+1. php (e.g: yum install php)
+2. PEAR.
+
+To install PEAR:
+#>wget http://pear.php.net/go-pear.phar
+#>php go-pear.phar
+ 
+To run the sample application:
+
+1. Extract the tarball:
+#>tar xfz asterisk-php-api-wat.tgz
+#>cd asterisk-php-api-wat
+#>cd docs/examples
+
+2. To send SMS:
+#>php sendSmsAscii.php   // to send a SMS in ASCII
+#>php sendSmsAsciiConcat.php //to send Concatenated SMS messages
+#>php sendSmsUtf8GsmAlphabet.php   //to send SMS with UTF-8, base64 encoded
+#>php sendSmsUtf8.php    //to send SMS with UTF-8, base64 encoded, characters outside GSM alphabet
+
+3. To listen for incoming SMS:
+#>php receiveSms.php
