@@ -2,19 +2,18 @@
 -> Sending/Receiving SMS using Asterisk Management Interface
 LibWAT Asterisk Management Interface
 
-Sample scripts in PHP
+Note: See sample scripts in PHP
 
  
-Sending SMS
+#Sending SMS
 Action:WATSendSms
 Span: <span number>
 To-Number: <Destination/Called number>
 Content: <message>
 
 
-Full list of parameters
- 
-Receiving SMS
+
+#Receiving SMS
 
 Event:WATIncomingSms
 Span: <span number>
@@ -34,7 +33,7 @@ ServiceCentre parameter is only available when SMS is received in PDU mode.
 The zone in Timestamp is in relation to GMT, one unit is 15 mins, for example, zone=-12 means timezone is GMT-3.
 When receiving multiple concated SMS's, the Sequence Number defines the message number and total number of message in group.
 
-Network Status Change  
+#Network Status Change  
 
 Event:WATNetStatus
 Span: <span number>
