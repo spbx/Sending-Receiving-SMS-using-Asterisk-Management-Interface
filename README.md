@@ -27,7 +27,7 @@ Message-Type-Indicator: SMS-DELIVER
 Content: <message>
 
 
-#See Full list of parameters#
+Note: See Full list of parameters
 
 Note:
 ServiceCentre parameter is only available when SMS is received in PDU mode.
