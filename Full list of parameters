@@ -1,0 +1,140 @@
+LibWAT Asterisk Management Interface SMS Parameters
+
+Sample AMI scripts
+
+ActionID
+The asterisk AMI Action ID. 
+
+
+Span
+Span number on which to send the SMS. Not required if group is specified.
+
+
+Group
+[not implemented yet] 
+The group number on which to send the SMS. Not required if span is specified.
+
+
+To-Number(outgoing only)
+Destination number to send the number to.
+
+
+To-Plan
+Numbering plan for the Destination Number.
+Possible values:
+Unknown, International, national, network specific, subscriber, alphanumeric, abbreviated
+
+
+To-Type
+Type of Number for the Destination Number
+Possible values:
+Unknown, ISDN, data, telex, national, private, ermes 
+
+From-Number
+Origination number (Caller ID). 
+
+
+From-Plan
+Numbering plan for the Origination Number.
+Possible values:
+same as To-Plan. 
+
+
+From-Type
+Type of number  for the Origination Number.
+Possible values:
+same as To-Type. 
+
+
+Timestamp (incoming only)
+Timestamp for the incoming SMS. The zone in Timestamp is in relation to GMT, one unit is 15 mins, for example, zone=-12 means timezone is GMT-3. 
+
+
+Type (incoming only)
+Method used to deliver the SMS. (PDU or Text) 
+
+
+X-SMS-Message-Type
+Value should be SMS-DELIVER 
+
+X-SMS-SMSC-Number
+Short Message Service Centre  Number
+
+
+X-SMS-SMSC-Plan
+Numbering plan for the SMSC.
+Possible values:
+Same as To-Plan 
+
+
+X-SMS-SMSC-Type
+Type of Number:
+Same as To-Type 
+
+
+X-SMS-More-Messages-To-Send
+Set to Yes if this message is part of multiple concatenated SMS messages and there are more messages to be received. 
+
+
+X-SMS-Reply-Path
+Reply path. 
+
+
+X-SMS-User-Data-Header-Indicator
+Whether the SMS Header contained a User Data Header Indicator
+
+X-SMS-Status-Report-Indication (incoming)
+Whether Status Report was enabled 
+
+
+X-SMS-Status-Report-Request(outgoing)
+Request a Status Report 
+
+
+X-SMS-Validity-Period-Type(outgoing)
+Type of Validity Period to use.
+Possible values:
+Absolute, relative, enhanced
+(only relative validity implemented at the moment)
+
+
+X-SMS-Validity-Period 
+Validity Period value
+
+
+X-SMS-Class
+SMS Message class.
+Possible values:
+General, ME-Specific, TE-Specific 
+
+X-SMS-IE-Identifier
+Information Element Identifier. 
+
+
+X-SMS-Reference-Number
+SMS Reference Number. Should be the same for all SMS within a group of concatenated SMS. 
+
+ 
+
+X-SMS-Concat-Sequence-Number
+SMS concatenated sequence number. 
+
+
+X-SMS-Concat-Total-Messages
+Total number of messages within the group of concatenated SMS. 
+
+ 
+
+Content-Type
+Set to Content-Type: text/plan charset=<ASCII or UTF-8> 
+
+
+Content-Transfer-Encoding
+Content can be encoded if it is not possible to represent the content in a string representation.
+Possible values:
+none, base64, hex
+[hex encoding not implemented yet] 
+
+
+Content
+SMS Message content. 
